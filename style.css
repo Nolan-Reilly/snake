@@ -100,6 +100,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+  margin-top: 30px;
   letter-spacing: 2px;
   font-size: 34px;
   border-radius: 20px;
@@ -107,7 +108,7 @@ html, body {
 
 #playAgainBtn {
   display: block;
-  margin: 35px auto 0px auto;
+  margin: 40px auto 0px auto;
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   letter-spacing: 2px;
