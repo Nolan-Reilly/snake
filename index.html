@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <link rel="shortcut icon" href="images/snake.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ontouchstart="touchStart(event)" ontouchmove="touchMove(event)" ontouchend="touchEnd()">
+  <div class="outer">
+    <div class="middle">
+      <div class="container">
+        <div id="gameContainer">
+          <div class="scoreContainer">
+            <div class="currentScoreContainer">
+              <div class="apple"></div>
+              <div id="scoreText">0</div>
+            </div>
+            <div class="highScoreContainer">
+              <div class="trophy"></div>
+              <div id="highScoreText">0</div>
+            </div>
+          </div>
+          <canvas id="gameBoard" width="400" height="400"></canvas>
+        </div>
+        <div class="gameOverCard">
+          <h1 class="gameOverText">Game Over!</h1>
+          <button id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+/* General Containers & Misc */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.container {
+  margin: 0 auto;
+  width: 400px;
+  position: relative;
+}
+
+#gameContainer {
+  text-align: center;
+}
+
+#gameBoard {
+  border: 5px solid;
+}
+
+/* Score Styles */
+.scoreContainer {
+  display: flex;
+  align-items: center;
+}
+
+.currentScoreContainer {
+  display: flex;
+  align-items: center;
+}
+
+.apple {
+  height: 15px;
+  width: 15px;
+  background-color: #e7491c;
+  flex-grow: 0;
+}
+
+#scoreText {
+  margin-left: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  align-content: flex-start;
+}
+
+.highScoreContainer {
+  margin-left: 62px;
+  display: flex;
+  align-items: center;
+}
+
+.trophy {
+  height: 15px;
+  width: 15px;
+  background-color: #ffbf09;
+  flex-grow: 0;
+}
+
+#highScoreText {
+  margin-left: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  align-content: flex-start;
+}
+
+/* Game Over Card Styles */
+.gameOverCard {
+  position: absolute;
+  top: 31%;
+  right: 17%;
+  background-color: rgba(220, 220, 220, 0.9);
+  height: 200px;
+  width: 250px;
+  border-radius: 15px;
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  display: none;
+  position: absolute;
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.35);
+}
+
+.gameOverText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  font-size: 34px;
+  border-radius: 20px;
+}
+
+#playAgainBtn {
+  display: block;
+  margin: 35px auto 0px auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
+
+/* Effects */
+.blur {
+  filter: blur(0.75px);
+  -webkit-filter: blur(0.75px);
+}
+
+/* Keyframes & Media Queries */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@media (max-width: 600px) {
+  #gameBoard {
+    width: 300px;
+    height: 300px;
+  }
+
+  .container {
+    width: 300px;
+  }
+
+  .gameOverCard {
+    top: 25%;
+    right: 6.5%;
+  }
+
+  .gameOverText {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .playAgainBtn {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
